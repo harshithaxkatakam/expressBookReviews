@@ -36,7 +36,7 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     const { isbn } = req.params;
     const { review } = req.body;
     const username = req.user.username;
-
+    console.log(username)
     if (!books[isbn]) {
         return res.status(404).json({ message: "Book not found" });
     }
